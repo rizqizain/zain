@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak - Nyoklat.in</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="01.png" alt="Logo Nyoklat.in" />
+    <h1>Nyoklat.in</h1>
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
+      <span style="font-size:28px; color:white;">☰</span>
+    </div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="menu.html">Menu</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Hubungi Kami</h1>
+    <div class="text">
+    <p>Butuh bantuan atau ingin memesan langsung? Kirim pesanmu lewat formulir di bawah ini 👇</p>
+    </div>
+    <form onsubmit="alert('Pesan berhasil dikirim!'); return false;">
+      <input type="text" placeholder="Nama Anda" required>
+      <input type="email" placeholder="Email Anda" required>
+      <textarea placeholder="Tulis pesan Anda..." rows="5" required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Nyoklat.in | Hubungi Kami Kapan Saja
+  </footer>
+</body>
+</html>

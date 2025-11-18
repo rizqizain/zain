@@ -1,0 +1,246 @@
+/* ========== STYLE DASAR ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('ed.jpg');
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ========== HEADER ========== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #5b3927, #7b5035);
+  padding: 14px 6%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #fff8f0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: 0.3s;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffe0b5;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* ========== MAIN KONTEN ========== */
+main {
+  flex: 1;
+  padding: 50px 7%;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main h1 {
+  color: white;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+main p {
+  font-size: 1.05rem;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #4a3c37;
+}
+
+.text p {
+  color: white;
+  text-align: justify;
+}
+
+ ========== MENU LIST ========== */
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.menu-item {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  margin: 20px;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.menu-item img {
+  width: 250px;
+  height: 300px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.menu-item h3 {
+  color: #5b3927;
+  margin-bottom: 8px;
+}
+
+.menu-item p {
+  font-size: 0.95rem;
+  color: black;
+}
+
+.pesan {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #6b3a28, #8c543b);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pesan:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #8c543b, #a06547);
+}
+
+/* ========== FORM KONTAK ========== */
+form {
+  max-width: 450px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d5c2b0;
+  background: #fffaf5;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #8c543b;
+  background: #fff;
+}
+
+button {
+  background: linear-gradient(90deg, #6b3a28, #8c543b);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #8c543b, #a06547);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #5b3927;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #6b3a28;
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    padding: 15px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  main h1 {
+    font-size: 1.8rem;
+  }
+
+  main p {
+    font-size: 0.95rem;
+  }
+}
